@@ -1,0 +1,78 @@
+header {
+  background-color: color(amarelo);
+
+  h1 {
+    width: 15%;
+
+    @media (max-width: 400px) {
+      width: 100%;
+      margin-top: space(base);
+      min-height: 50px;
+    }
+
+    a {
+      display: block;
+      background-image: url('assets/Logo_ML-grande.png');
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: center;
+      height: 100%;
+      overflow: hidden;
+      text-indent: -9999px;
+      background-size: 60px;
+      
+      @media (max-width: 600px) {
+        background-image: url('assets/Logo_ML.png');
+      }
+    }
+  }
+
+
+  input {
+    background-color: color(branco);
+    border: none;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: space(p);
+    width: 90%;
+
+    @media (max-width: 400px) {
+      width: 90%;
+      padding: space(medium);
+    }
+  }
+
+  button {
+    width: 5%;
+    background-color: color(cinza, light);
+    background-image: url('assets/ic_Search.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+    cursor: pointer;  
+
+    @media (max-width: 400px) {
+      width: 10%;
+    }
+  }
+
+  form {
+    display: flex;
+    width: 80%;
+    margin: space(base, 0);
+
+    @media (max-width: 400px) {
+      width: 100%;
+      margin: space(base);
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
