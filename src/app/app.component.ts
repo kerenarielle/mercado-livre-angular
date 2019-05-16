@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule , FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,29 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+  public headerForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder
-  ) {}
+    private fb: FormBuilder,
+    private router: Router
+  ) {
+    this.initForm(fb);
+  }
 
   ngOnInit(){}
+
+  initForm(fb:FormBuilder) {
+    this.headerForm = fb.group({
+      produto: ['', Validators.required]
+    })
+  }
+
+  send(value: any) {
+    this.router.navigate(['home'], {
+      queryParams: {
+        id: value.produto
+      }
+    })
+  }
 
 }

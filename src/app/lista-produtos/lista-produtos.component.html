@@ -1,14 +1,14 @@
 <section class="container">
   <ul>
-    <li>
-      <img src="" alt="">
+    <li *ngFor="let item of produtos" (click)="verItem(item.id)">
+      <img src={{item.thumbnail}} alt="imagem produto">
       <div>
-        <span></span>
-        <img src="" alt="">
-        <span></span>
-        <span></span>
+        <span>R${{item.price}}</span>
+        <img hidden={{!item.shipping.free_shipping}} src="../../assets/ic_shipping.png" alt="ícone frete">
+        <span>{{item.title}}</span>
+        <span class="cidade">{{item.seller_address.city.name}}</span>
       </div>
-      <span></span>
+      <span>{{item.seller_address.city.name}}</span>
     </li>
   </ul>
 </section>

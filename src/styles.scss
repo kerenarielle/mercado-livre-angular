@@ -1,8 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @charset 'UTF-8';
 
 // @section  Tools [ferramentas]
-
 @import './assets/styles/tools/functions/_colors.scss';
 @import './assets/styles/tools/functions/_clean-unit.scss';
 @import './assets/styles/tools/functions/_converters.scss';
@@ -10,16 +8,21 @@
 @import './assets/styles/tools/functions/_get-maps.scss';
 @import './assets/styles/tools/functions/_space.scss';
 
-// // @section  Settings [configurações]
+// @section  Settings [configurações]
 @import './assets/styles/config.scss';
 
-// // @section Generics [genéricos]
+// @section Generics [genéricos]
 @import './assets/styles/generics/_reset.scss';
 
+// @section Element [Elementos]
 @import './assets/styles/elements/body.scss';
 
+// @section Component [Componentes]
 @import './assets/styles/components/header.scss';
 @import './assets/styles/components/container.scss';
-@import './assets/styles/components/resultados.scss';
 @import './assets/styles/components/lista-resultados.scss';
 @import './assets/styles/components/item-produto.scss';
+
+
+// @section Template [Paginas]
+@import './assets/styles/template/lista-produtos.scss';

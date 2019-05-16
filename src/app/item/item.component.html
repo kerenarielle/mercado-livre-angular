@@ -1,3 +1,15 @@
-<p>
-  item works!
-</p>
+<section class="container item-produto">
+  <div>
+    <img src="{{imageUrl}}" alt="imagem item">
+  </div>
+  <div>
+    <span>{{condicao}} - {{item.sold_quantity}}</span>
+    <strong>{{item.title}}</strong>
+    <span>${{item.price}}</span>
+    <button>Comprar</button>
+  </div>
+  <div>
+    <h4>Descripción del producto</h4>
+    <p>{{descricao}}</p>
+  </div>
+</section>

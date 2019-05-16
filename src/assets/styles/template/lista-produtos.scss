@@ -1,0 +1,12 @@
+app-lista-produtos {
+    display: block;
+
+    .container {
+        background-color: color(branco);
+    }
+
+    ul {
+        margin: space(big, 0);
+        padding: space(base);
+    }
+}
