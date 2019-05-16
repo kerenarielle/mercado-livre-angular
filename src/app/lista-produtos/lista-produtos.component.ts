@@ -44,20 +44,12 @@ export class ListaProdutosComponent implements OnInit, AfterViewInit {
           }
         )
       } else {
-        this.produtosService.getProdutos().then(
-            res => {
-              this.produtos = res;
-            }
-          )
+        this.produtosService.getProdutos().then( res => { this.produtos = res;})
       }
     })
   }
 
   verItem(id) {
-    this.router.navigate(['/item'], {
-      queryParams: {
-        item: id
-      }
-    })
+    this.router.navigate(['/item'], { queryParams: { item: id }})
   }
 }
