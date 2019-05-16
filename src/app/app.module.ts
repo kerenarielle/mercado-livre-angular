@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule
   ],
   providers: [
-    ProdutoService
+    ProdutoService,
+    {provide: 'API_URL', useValue: environment.apiEndPoint}
   ],
   bootstrap: [AppComponent]
 })
